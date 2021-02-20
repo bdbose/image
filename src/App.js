@@ -1,4 +1,4 @@
-import './styles.css';
+import './App.css';
 import React, { createRef, useEffect, useState } from 'react';
 import Axios from 'axios';
 import Dialog from '@material-ui/core/Dialog';

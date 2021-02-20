@@ -1,38 +1,113 @@
+.dialog-content {
+  width: 50vh;
+}
+#preview {
+  width: inherit;
+  max-height: 40vh;
+  object-fit: cover;
+}
+.title {
+  font-size: 25px;
+  margin: 30px;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input[type='text'] {
+  font-size: 20px;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+  width: 60vw;
+}
+input[type='submit'] {
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: cyan;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(0 202 202);
+  color: white;
+  border: 0;
+  font-size: 20px;
+}
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display {
+  display: grid;
+  width: 80vw;
+  margin: auto;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  margin-top: 30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 800px) {
+  .display {
+    grid-template-columns: auto auto;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 500px) {
+  .display {
+    grid-template-columns: auto;
+  }
+}
+.page-count {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.page-count button {
+  background: 0;
+  text-decoration: underline;
+  border: 0;
+  color: wheat;
+  outline: none;
+  cursor: pointer;
+}
+.display-container {
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: auto;
+  background: #333333;
+  color: wheat;
+  box-shadow: 0 0 10px black;
 }
-
-.App-link {
-  color: #61dafb;
+.user-details {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-details span {
+  display: flex;
+  align-items: center;
+}
+.user-details-dialog {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: auto;
+}
+.user-details-dialog span {
+  display: flex;
+  align-items: center;
+}
+.display-container img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
